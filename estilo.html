@@ -1,0 +1,109 @@
+
+   Folhas de estilo em Cascatas.
+
+   CSS é a definição de estilo. Apresente seus elementos HTML a um mundo totalmente novo.
+CSS pertence a um trio de tecnologias da web centrais ao lado de HTML e JavaScript. Com um planejamento cuidadoso, o CSS contribui para uma separação de interesses. Recursos independentes controlam a estrutura de um conteúdo, sua apresentação.
+s folhas de estilo desempenham um papel importante na acessibilidade, escalabilidade e até mesmo no desempenho da web. Como autor de conteúdo ou web designer, eles fornecem controle sobre como os dispositivos renderizam o conteúdo. Do layout ao tamanho e cor da fonte, o CSS transforma o conteúdo em páginas bonitas.
+
+Qual é a aparência do CSS?
+CSS é uma grande linguagem – há muitas coisas diferentes para estilizar! Mas sua sintaxe é direta, com apenas algumas regras para aprender.
+
+Os elementos HTML têm várias propriedades que o CSS pode definir. A propriedade color define a cor do primeiro plano (por exemplo, texto). O tamanho da fonte depende da  propriedade font-size .
+1. Cascading Style Sheets (CSS) é uma linguagem de folha de estilos utilizada para definir o
+O CSS tem uma aparência simples e direta, porém ele permite que você adicione muita complexidade nas suas páginas.
+O CSS tem uma aparência simples e direta, contudo ele permite que você crie estilos complexos através   
+de várias combinações de cores, fontes, posicionamento etc...
+Existem quais tipos de heranças no CSS?
+Herança: É o conceito de reutilizar código entre diferentes páginas da web. Por exemplo, se você tiver
+um site com vários links para outros sites (como Facebook ou Twitter), pode ser útil ter apenas um único
+código-fonte para esses links. Isso significa que não precisará copiar/colar esse mesmo link para cada
+página. Em vez disso, basta definir as propriedades na página pai e os filhos herdarão essa configuração
+automCada propriedade pode ser definida com um valor compatível. A atribuição de um valor a uma propriedade é uma “declaração”. Geralmente, eles se parecem com isto:
+
+property: value
+Por exemplo:
+
+color: red
+Valores para propriedades diferentes podem parecer muito diferentes, até mesmo valores para a mesma propriedade. Por exemplo, aqui estão mais duas maneiras de escrever a declaração anterior:
+
+color: #ff0000
+color: rgb(255, 0, 0)
+Como HTML e folhas de estilo se unem
+Você pode combinar HTML e CSS de algumas maneiras diferentes, cada uma com suas vantagens.
+
+Estilos de escrita inline
+O método mais simples é anexar declarações de estilo diretamente a um elemento no arquivo HTML. Você pode fazer isso usando o atributo style da seguinte maneira:
+
+<body style="color: red">
+    <p>Most of this text is red …</p>
+    <p style="color: blue">… but this isn’t!</p>
+</body>
+Embora estilizar elementos em linha como esse possa ser conveniente, ele tem várias desvantagens. Para começar, isso complica o HTML, tornando-o mais difícil de ler à primeira vista. Também é difícil de manter: imagine um documento longo no qual queremos definir a cor de cada parágrafo. Isso é CSS, mas não é “Folhas de estilo”.
+
+Incorporando estilos na cabeça
+Você pode começar a ver a aparência de uma folha de estilo com o segundo mecanismo, incorporação . Usando essa abordagem, reunimos todas as declarações de estilo dentro de um  elemento de estilo no cabeçalho  de nosso documento. Será mais ou menos assim:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    /* style instructions go here */
+    </style>
+  </head>
+<body>
+  ...
+Porém, nossas instruções de estilo precisam de um pouco mais de detalhes do que antes. Como os movemos para o cabeçalho, cada regra não está mais associada a um elemento. Podemos ter declarado  cor: vermelho , mas o que deveria ter essa cor?
+
+É aqui que entram os seletores de CSS . Eles nos permitem direcionar partes específicas da página e definir seu estilo em um só lugar, usando esta sintaxe:
+
+selector {
+    declaration1;
+    declaration2;
+    /* etc. */
+}
+Por exemplo, para estilizar o texto dos parágrafos em azul, podemos especificar o seguinte:
+
+p {
+    color: blue;
+}
+Neste exemplo, o seletor é simplesmente p , que corresponde a todos os elementos de parágrafo em nosso documento. Todo o texto será colorido de azul, desde que esteja nas tags <p> .
+
+Vinculando uma folha de estilo externa
+O método final a cobrir é a vinculação. Esta é, de longe, a abordagem mais útil e pela qual você deve optar na maior parte do tempo. Em vez de incorporar regras CSS no  elemento de estilo diretamente em seu documento, você pode movê-las para um arquivo separado.
+
+<link rel="stylesheet" href="styles.css" />
+Cole este código dentro das tags <head> de seu arquivo HTML para vincular sua folha de estilo externa.
+
+O poder do CSS
+Com o método vinculado, estamos aproveitando um poder central do CSS: separação de interesses. Todas as informações semânticas – o que o conteúdo significa – estão contidas no documento HTML. O estilo – o que parece – está em um arquivo separado, a folha de estilo.
+
+Aqui estão apenas alguns benefícios dessa separação:
+
+Você pode trocar uma folha de estilo apenas alterando a referência do arquivo. Isso pode até acontecer dinamicamente. Em uma etapa, você pode alterar toda a aparência de uma página.
+Muitas páginas podem compartilhar as mesmas folhas de estilo, conforme necessário. Ao alterar um único arquivo, você pode atualizar a aparência de um site inteiro.
+Dividir uma página em ‘conteúdo’ e ‘estilo’ traz benefícios técnicos. Os proxies e navegadores podem armazenar arquivos individuais em cache separadamente. Isso significa que um site pode enviar suas informações de estilo uma vez, em vez de incluí-las em todas as páginas.
+Ao colaborar, diferentes equipes podem trabalhar com seus pontos fortes, criando e editando arquivos separados sem afetar uns aos outros.
+Explicando o Cascade
+Você aprendeu muito sobre estilos e folhas de estilo, mas e quanto à parte “cascata” do CSS?
+
+A cascata é o que decide quais estilos usar quando várias folhas de estilo estão presentes. Você viu como um autor pode especificar estilos para seu conteúdo. Mas outra característica do CSS é que ele dá aos leitores e fabricantes de navegadores alguma opinião sobre o assunto também.
+
+Você já deve ter se perguntado sobre os estilos padrão. Por exemplo, como um elemento H1 aparece grande e em negrito, mesmo sem nenhuma folha de estilo do autor? Isso graças a um conjunto de regras especiais que constituem a folha de estilo do agente do usuário. Essas regras são inicialmente aplicadas por seu navegador da web a todas as páginas que você visita.
+
+A cascata especifica que uma folha de estilo do autor se aplica após os estilos do agente do usuário. Se nosso navegador disser “os títulos estão em negrito”, mas o autor da página declarar “os títulos nesta página estão claros”, eles acabarão claros.
+
+Existe outra fonte de folha de estilo que passa algum controle para o leitor. Qualquer usuário da web pode, em teoria, manter uma folha de estilo do usuário com regras personalizadas. Elas ficam no meio: as regras do usuário sobrescreverão as configurações padrão do navegador, mas elas mesmas serão sobrescritas pelos estilos do autor. Infelizmente, o suporte para folhas de estilo do usuário nunca foi muito difundido.
+
+Segmentando diferentes mídias
+Você pode usar folhas de estilo em diferentes contextos, além da tela. O atributo media do elemento link define a quais tipos de mídia a folha de estilo se aplica. Por exemplo, você pode definir uma folha de estilo para impressão usando marcação como a seguinte:
+
+<link rel="stylesheet" href="print.css" media="print" />
+Você pode reunir estilos comuns em uma folha de estilo global e estilos específicos de mídia em arquivos separados. Existem até tipos de mídia para atender a apresentações auditivas ou em braille de seu conteúdo. CSS é uma ferramenta vital para melhorar a acessibilidade.
+
+Sites como a Wikipedia usam CSS para controlar seu estilo de impressão, ocultar elementos indesejados e simplificar o layout.
+
+CSS faz com que o HTML pareça bom
+As folhas de estilo em cascata cobrem muito: cascata, herança, seletores, fontes, mídia, etc. Mas seu poder habilita a web moderna. Este é um meio que fornece recursos integrados de reutilização, flexibilidade e acessibilidade.
+
+Para ver todo o poder do CSS e quanto ele tem a oferecer, verifique nossa folha de dicas que cobre todas as propriedades essenciais do CSS3.
+

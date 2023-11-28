@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height:100px;
+    background:#ff1493 ;
+    border-radius :5%;
+    padding: 20px;
+    border: 10px solid seagreen;
+}
+
+/*- width-> largura
+height -> altura
+background -> cor de fundo
+border-radius : raio da borda arredondada
+padding -> espaço entre o conteúdo e as margens do box
+border -> tamanho, estilo e cor das bordas
+
+Box- sizing -> quando box-sizing- border-box ->a caixa nunca crece é citada o elemento não muda, os valores de width e height posso adicionar varios elementos que ele não muda sua estrutura.
+Box-sizing-> quando box-sizing- content-box-> agora a caixa sempre vai crecer esse quando eu adiciono outros elementos ele vai mudando crecendo e pode até se perder 
+
+
+
+
+*/
+

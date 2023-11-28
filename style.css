@@ -1,0 +1,35 @@
+
+css
+
+*{
+    color: green;
+}
+/* Exemplo4: Selecionando a Tag H2 */
+h2 {
+    color:green;
+    font-size:24px;
+    }
+
+/* Exemplo5: Selecionando a Tag H3 */
+h3 {
+    color:purple;
+    font-size:20px;
+    }
+
+/* Exemplo6: Selecionando a Tag H4 */
+h4 {
+    color:orange;
+    font-size:16px;
+    }
+
+/* Exemplo7: Selecionando a Tag H5 */
+h5 {
+    color:yellow;
+    font-size:14px;
+    }
+
+/* Exemplo8: Selecionando a Tag H6 */
+h6 {
+    color:pink;
+    font-size:12px;
+    }

@@ -1,0 +1,70 @@
+<!--Seletor no Css!
+--Seletor é algo que seleciona,tem varios tipos de seletores tem por tags,id,classe,*-
+-Podemos usar mais de um tipo de seleção em uma mesma tag.
+--Identificando elementos no html!
+--Class (classes)
+--A classe seria como um cep. ela serve para identificar vários elementos.Ou seja, elementos no html podem usar a mesma clase, e conseguimos estilizalos no css.
+
+--Id(identificação unica do elemento)
+ID indentificador único
+--Já o ID como seu CPF ou RG. Ele serve para identificar um elemento.Ou seja, você só pode usar um ID especifico uma vez na sua página html.
+--Tag (tag)
+TAG identifica o nome da tag
+--* (asterisco)
+ASTERISCO significa qualquer coisa
+*/
+//Exemplo 1: Selecionar todas as divs com a classe "destaque"
+div.destaque{
+    background-color:#00ff00;
+    }
+    /* Exemplo2: Selecionar todos os links internos */
+    a[href^="http"] {
+        color: red;
+        }
+        /* Exemplo3: Selecionar todos os parágrafos dentro das li's e ul's */
+        p > ul>li p{}
+        
+
+
+
+
+
+*/
+//Exemplo 1: Selecionando a Tag P
+p{  
+    color:#0f3;
+    }
+    /* Exemplo2 : Selecionando o id #principal */   
+    #principal {
+        color:red;}
+        /* Exemplo3: Selecionando a classe .titulos */
+        h1,.titulos{color:blue}
+        /* Obs.: A ordem importa para ser lida do primeiro ao ultimo exemplo.*/ 
+        /*Obs.: Os exemplos acima são apenas alguns dos seletores disponiveis na CSS.*/ 
+        --O *é um seletor que seleciona tudo na sua pagina, o * vai aplicar para toda a pagina.
+        /*Como fazer comentarios?
+        /*Para criar um comentario basta colocar // antes da frase ou /* e após isso termina a linha.*/ 
+        * É um seletor universal.
+
+           
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>seletor css</title>
+</head>
+<body>
+    
+    <h2>Deus é fiel!</h2>
+    <h3A vontade de Deus é sempre perfeita e se encaixa agradavelmente em nossas vidas.></h3>
+    <h4>Se Deus está no meu caminho, não há obstáculo capaz de me fazer desistir.</h4>
+    <h5>Eu acredito que dias melhores virão e Deus me mostra diariamente que não posso nem pensar em desistir.</h5>
+    <h6>Jesus sempre será o amor da minha vida.</h6>
+
+</body>
+</html>
